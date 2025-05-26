@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolarFrenel - Affordable Solar Energy for Egypt</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8; /* Light background */
+        }
+        /* Custom scrollbar for a nicer look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        /* Keyframe for fade-in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        .delay-500 { animation-delay: 0.5s; }
+        .delay-1000 { animation-delay: 1s; }
+        /* Ensure elements are hidden before animation */
+        .animate-fade-in-up, .animate-fade-in {
+            opacity: 0;
+        }
+        .fade-in-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <nav class="bg-white shadow-md py-4 px-6 md:px-12 flex justify-between items-center fixed w-full z-10 top-0">
+        <div class="flex items-center">
+            <span class="text-2xl font-bold text-blue-600 mr-4">SolarFrenel</span>
+            <span class="text-sm text-gray-500 hidden md:block">Andrew - Martina - Rashad</span>
+        </div>
+        <div class="hidden md:flex space-x-6">
+            <a href="#home" class="text-gray-700 hover:text-blue-600 transition duration-300">Home</a>
+            <a href="#business-description" class="text-gray-700 hover:text-blue-600 transition duration-300">Business Description</a>
+            <a href="#environmental-scanning" class="text-gray-700 hover:text-blue-600 transition duration-300">Environmental Scan</a>
+            <a href="#solutions" class="text-gray-700 hover:text-blue-600 transition duration-300">Solutions</a>
+            <a href="#team" class="text-gray-700 hover:text-blue-600 transition duration-300">Our Team</a>
+            <a href="#funding" class="text-gray-700 hover:text-blue-600 transition duration-300">Funding</a>
+            <a href="#additional-info" class="text-gray-700 hover:text-blue-600 transition duration-300">Additional Info</a>
+            <a href="#appendices" class="text-gray-700 hover:text-blue-600 transition duration-300">Appendices</a>
+            <a href="#references" class="text-gray-700 hover:text-blue-600 transition duration-300">References</a>
+            <a href="#contact" class="text-gray-700 hover:text-blue-600 transition duration-300">Contact</a>
+        </div>
+        <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+    </nav>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg fixed top-16 w-full z-10">
+        <a href="#home" class="block py-3 px-6 text-gray-700 hover:bg-blue-50 transition duration-300">Home</a>
+        <a href="#business-description" class="block py-3 px-6 text-gray-700 hover:bg-blue-50 transition duration-300">Business Description</a>
+        <a href="#environmental-scanning" class="block py-3 px-6 text-gray-700 hover:bg-blue-50 transition duration-300">Environmental Scan</a>
+        <a href="#solutions" class="block py-3 px-6 text-gray-700 hover:bg-blue-50 transition duration-300">Solutions</a>
+        <a href="#team" class="block py-3 px-6 text-gray-700 hover:bg-blue-50 transition duration-300">Our Team</a>
+        <a href="#funding" class="block py-3 px-6 text-gray-700 hover:bg-blue-50 transition duration-300">Funding</a>
+        <a href="#additional-info" class="block py-3 px-6 text-gray-700 hover:bg-blue-50 transition duration-300">Additional Info</a>
+        <a href="#appendices" class="block py-3 px-6 text-gray-700 hover:bg-blue-50 transition duration-300">Appendices</a>
+        <a href="#references" class="block py-3 px-6 text-gray-700 hover:bg-blue-50 transition duration-300">References</a>
+        <a href="#contact" class="block py-3 px-6 text-gray-700 hover:bg-blue-50 transition duration-300">Contact</a>
+    </div>
+
+    <section id="home" class="relative bg-gradient-to-r from-blue-500 to-purple-600 text-white h-screen flex items-center justify-center text-center pt-16">
+        <div class="container mx-auto px-6 py-12">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-up">
+                SolarFrenel: Affordable, Sustainable Energy for Every Egyptian Home
+            </h1>
+            <p class="text-lg md:text-xl mb-8 opacity-0 animate-fade-in delay-500">
+                Harnessing the sun's energy with innovative Fresnel lenses and Tesla turbines for reliable, independent power.
+            </p>
+            <a href="#business-description" class="inline-block bg-white text-blue-600 hover:bg-blue-100 px-8 py-4 rounded-full text-lg font-semibold shadow-lg transform hover:scale-105 transition duration-300 opacity-0 animate-fade-in delay-1000">
+                Learn More About Us
+            </a>
+        </div>
+    </section>
+
+    <section id="business-description" class="bg-gray-50 py-16 md:py-24 px-6">
+        <div class="container mx-auto max-w-5xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Business Description</h2>
+            <div class="flex flex-col md:flex-row items-center justify-between gap-12 mb-12">
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400/4CAF50/ffffff?text=Solar+Energy+in+Egypt" alt="Solar Energy in Egypt" class="rounded-lg shadow-xl w-full h-auto object-cover">
+                </div>
+                <div class="md:w-1/2 text-lg leading-relaxed text-gray-700">
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">Overview of the Business Idea</h3>
+                    <p class="mb-4">
+                        SolarFrenel is an innovative clean energy startup dedicated to providing affordable, sustainable, and reliable solar energy solutions for households across Egypt. Our primary goal is to empower Egyptian homes to achieve energy independence while actively contributing to the nation's energy security and environmental sustainability goals.
+                    </p>
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">Products & Services, and the Problem They Solve</h3>
+                    <p class="mb-4">
+                        SolarFrenel offers a cutting-edge solar-powered generator system that leverages advanced Fresnel lenses and Tesla turbines to efficiently harness solar energy. A critical feature of our system is its integrated heat storage, ensuring a continuous energy supply even during nighttime or on cloudy days. This solution directly addresses Egypt's rising energy demand, electricity shortages, reliance on traditional sources, and the lack of widespread access to affordable, reliable renewable energy.
+                    </p>
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">Unique Value Proposition</h3>
+                    <p class="mb-4">
+                        Our unique value proposition lies in our combination of innovative technology (Fresnel lenses and Tesla turbines with integrated heat storage), affordability & scalability, ease of installation, and a clear path to energy independence and environmental impact. We offer a tangible path for households to reduce their reliance on the national grid, providing greater energy security and stability.
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8 mt-16">Proposed Business Model</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-lg leading-relaxed text-gray-700">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-semibold text-xl text-blue-600 mb-2">1. Direct Product Sales</h4>
+                    <p>We sell our solar energy generator systems directly to consumers (homeowners, farmers, small businesses). We have 3 types of generators depending on consumption size, serving middle-income and energy-conscious urban users first. Subsidized pricing will be available for rural or low-income users through green energy programs and grants.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-semibold text-xl text-green-600 mb-2">2. Government & NGO Funding</h4>
+                    <p>We leverage renewable energy grants, government programs, and international development funding to subsidize costs. This ensures accessibility while expanding reach, aligning with Egypt's target of 42% renewable energy by 2035.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-semibold text-xl text-purple-600 mb-2">3. Service-Based Recurring Revenue</h4>
+                    <p>We offer professional installation services as an add-on, along with optional annual maintenance and monitoring contracts. These services are especially valuable in remote areas where technical support might be limited.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="font-semibold text-xl text-yellow-600 mb-2">4. Impact-Based Monetization (Future)</h4>
+                    <p>We plan to quantify and register our total reduced CO₂ emissions with carbon credit standards (e.g., Verra, Gold Standard) and sell them in the voluntary carbon market. This generates additional revenue while strengthening our environmental impact reporting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="environmental-scanning" class="bg-white py-16 md:py-24 px-6">
+        <div class="container mx-auto max-w-5xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Environmental Scanning: Strategic Insights</h2>
+            <p class="text-center text-gray-600 mb-8">
+                Below are the strategic insights derived from our PESTEL, Porter's Five Forces, and SWOT analyses. For the detailed analyses, please refer to the <a href="#appendices" class="text-blue-600 hover:underline font-semibold">Appendices</a> section at the bottom of this page.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">Market Landscape & Opportunities (PESTEL Insights)</h3>
+                    <ul class="list-disc list-inside text-gray-700 leading-relaxed">
+                        <li class="mb-2">Political Support: Strong governmental commitment to renewable energy targets (42% by 2035) with supportive policies and subsidies provides a favorable operating environment.</li>
+                        <li class="mb-2">Economic Demand: Egypt's rising energy demand and existing electricity shortages create a significant, unmet market need for reliable and affordable solutions.</li>
+                        <li class="mb-2">Technological Edge: Our innovative Fresnel + Tesla turbine system with heat storage positions us at the forefront of the market, offering a superior and consistent energy solution.</li>
+                        <li class="mb-2">Environmental Alignment: Our focus on CO₂ reduction directly aligns with national sustainability goals and attracts impact-driven funding.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold text-green-600 mb-4">Competitive Dynamics & Customer Needs (Porter's Five Forces Insights)</h3>
+                    <ul class="list-disc list-inside text-gray-700 leading-relaxed">
+                        <li class="mb-2">High Buyer Power: Customers, especially in rural and low-income areas, are price-sensitive and need affordable access. Our blended business model directly addresses this.</li>
+                        <li class="mb-2">Moderate Competition: While existing energy providers and other solar companies are present, our unique technology and affordability provide a strong differentiator.</li>
+                        <li class="mb-2">Target Customers & Needs:
+                            <ul class="list-circle list-inside ml-4">
+                                <li>Homeowners: Seek reliable, affordable, sustainable energy and reduced bills.</li>
+                                <li>Farmers/Small Businesses: Need consistent, cost-effective power for operations.</li>
+                                <li>Rural/Low-income users: Crucially need affordable, reliable access in underserved areas.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-16 bg-gray-50 p-6 rounded-lg shadow-md">
+                <h3 class="text-2xl font-semibold text-purple-600 mb-4 text-center">Internal Capabilities & Strategic Direction (SWOT Insights)</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-xl font-semibold text-gray-900 mb-2">Strengths:</h4>
+                        <ul class="list-disc list-inside text-gray-700 leading-relaxed">
+                            <li>Innovative Fresnel + Tesla turbine technology with reliable heat storage.</li>
+                            <li>Clear leadership and well-defined team roles.</li>
+                            <li>Resilient multi-stream revenue model aligned with national goals and SDGs.</li>
+                        </ul>
+                        <h4 class="text-xl font-semibold text-gray-900 mt-6 mb-2">Weaknesses:</h4>
+                        <ul class="list-disc list-inside text-gray-700 leading-relaxed">
+                            <li>Potential for heavy workload on Legal & Policy and Operations Leads.</li>
+                            <li>Need for earlier involvement of Impact & Research Analyst in strategic decision-making.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-semibold text-gray-900 mb-2">Opportunities:</h4>
+                        <ul class="list-disc list-inside text-gray-700 leading-relaxed">
+                            <li>Strong government support and incentives for renewable energy.</li>
+                            <li>Large, underserved market for affordable, reliable energy solutions in Egypt.</li>
+                            <li>Access to substantial grants and funding from international development organizations.</li>
+                            <li>Emerging voluntary carbon market for monetization.</li>
+                        </ul>
+                        <h4 class="text-xl font-semibold text-gray-900 mt-6 mb-2">Threats:</h4>
+                        <ul class="list-disc list-inside text-gray-700 leading-relaxed">
+                            <li>Competition from established energy providers and other solar solutions.</li>
+                            <li>Evolving regulatory environment and bureaucratic hurdles.</li>
+                            <li>Economic downturns affecting consumer purchasing power or grant availability.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solutions" class="bg-gray-50 py-16 md:py-24 px-6">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Our Innovative Solutions</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="bg-blue-50 rounded-lg shadow-lg p-8 transform hover:scale-105 transition duration-300">
+                    <div class="text-blue-600 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h1M3 12h1m15.325-4.243l.707-.707M3.929 19.071l.707-.707M18.364 5.636l-.707.707M5.636 18.364l-.707-.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center text-gray-900 mb-4">Advanced Solar Generators</h3>
+                    <img src="https://placehold.co/400x250/FFD700/000000?text=Fresnel+Lens+System" alt="Fresnel Lens System" class="rounded-lg shadow-md w-full h-auto object-cover mb-4">
+                    <p class="text-gray-700 text-center">
+                        Our core offering: a solar-powered energy generation system utilizing cutting-edge Fresnel lenses and Tesla turbines for clean, reliable energy. Designed for affordability and scalability.
+                    </p>
+                </div>
+
+                <div class="bg-green-50 rounded-lg shadow-lg p-8 transform hover:scale-105 transition duration-300">
+                    <div class="text-green-600 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center text-gray-900 mb-4">Integrated Heat Storage</h3>
+                    <img src="https://placehold.co/400x250/90EE90/000000?text=Heat+Storage+Solution" alt="Heat Storage Solution" class="rounded-lg shadow-md w-full h-auto object-cover mb-4">
+                    <p class="text-gray-700 text-center">
+                        Ensuring uninterrupted power, our systems incorporate advanced heat storage technology to provide continuous energy supply, even during the night or on cloudy days.
+                    </p>
+                </div>
+
+                <div class="bg-purple-50 rounded-lg shadow-lg p-8 transform hover:scale-105 transition duration-300">
+                    <div class="text-purple-600 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center text-gray-900 mb-4">Easy Installation & After-Sales</h3>
+                    <img src="https://placehold.co/400x250/ADD8E6/000000?text=Professional+Installation" alt="Professional Installation" class="rounded-lg shadow-md w-full h-auto object-cover mb-4">
+                    <p class="text-gray-700 text-center">
+                        Designed for ease of installation, our systems come with professional deployment services and comprehensive after-sales support, including maintenance and rural outreach.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="bg-white py-16 md:py-24 px-6">
+        <div class="container mx-auto max-w-5xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Meet Our Team</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="bg-gray-50 rounded-lg shadow-lg p-6 text-center transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/120x120/8B5CF6/ffffff?text=CEO" alt="CEO" class="rounded-full w-32 h-32 mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">CEO / Founder</h3>
+                    <p class="text-gray-700 text-sm">Vision, leadership, investor engagement. Accountable for strategic direction and financial planning.</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg shadow-lg p-6 text-center transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/120x120/3B82F6/ffffff?text=CTO" alt="CTO" class="rounded-full w-32 h-32 mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">CTO</h3>
+                    <p class="text-gray-700 text-sm">Engineering lead, product design, performance. Responsible and Accountable for Product R&D.</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg shadow-lg p-6 text-center transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/120x120/10B981/ffffff?text=Ops" alt="Operations Lead" class="rounded-full w-32 h-32 mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Operations Lead</h3>
+                    <p class="text-gray-700 text-sm">Handles supply chain, deployment, and logistics. Responsible for supply chain and installation.</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg shadow-lg p-6 text-center transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/120x120/EF4444/ffffff?text=Legal" alt="Legal & Policy Lead" class="rounded-full w-32 h-32 mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Legal & Policy Lead</h3>
+                    <p class="text-gray-700 text-sm">IP, certification, policy alignment. Responsible and Accountable for Regulatory Compliance & IP.</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg shadow-lg p-6 text-center transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/120x120/F59E0B/ffffff?text=Mktg" alt="Marketing & Education Lead" class="rounded-full w-32 h-32 mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Marketing & Education Lead</h3>
+                    <p class="text-gray-700 text-sm">Communication, education, branding. Accountable for public awareness and education campaigns.</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg shadow-lg p-6 text-center transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/120x120/6366F1/ffffff?text=Finance" alt="Finance & Grants Lead" class="rounded-full w-32 h-32 mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Finance & Grants Lead</h3>
+                    <p class="text-gray-700 text-sm">Cost models, grants, funding, business models. Accountable for all funding, grants, and pricing work.</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg shadow-lg p-6 text-center transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/120x120/06B6D4/ffffff?text=Analyst" alt="Impact & Research Analyst" class="rounded-full w-32 h-32 mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Impact & Research Analyst</h3>
+                    <p class="text-gray-700 text-sm">ESG, data collection, pilot evaluations. Leads impact assessment and data tracking.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="funding" class="bg-gray-100 py-16 md:py-24 px-6">
+        <div class="container mx-auto max-w-5xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Funding Our Vision</h2>
+
+            <div class="mb-16">
+                <h3 class="text-2xl md:text-3xl font-bold text-blue-600 mb-6 text-center">Seed Funding Request: $250,000</h3>
+                <p class="text-lg leading-relaxed text-gray-700 text-center mb-8">
+                    This initial funding will be crucial for finalizing our R&D and preparing for initial market entry.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-blue-50 p-6 rounded-lg shadow-md">
+                        <h4 class="font-semibold text-xl text-blue-800 mb-2">Use of Funds:</h4>
+                        <ul class="list-disc list-inside text-gray-700">
+                            <li>R&D Finalization: Testing the Fresnel + Tesla prototype; integrating heat storage.</li>
+                            <li>IP & Legal Work: Patent application, regulatory compliance, CE certification.</li>
+                            <li>Pilot Production: Building and deploying 25–50 units for initial pilot sites.</li>
+                            <li>Marketing & Education: Conducting awareness campaigns to simplify technology.</li>
+                            <li>Team Support: Hiring a field coordinator, legal assistant, and field technician.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-blue-50 p-6 rounded-lg shadow-md">
+                        <h4 class="font-semibold text-xl text-blue-800 mb-2">Potential Seed Funding Sources:</h4>
+                        <ul class="list-disc list-inside text-gray-700">
+                            <li>Government: Egypt Ventures, Cleanergy Accelerator, Ministry pilot funds.</li>
+                            <li>Grants: UNDP SDG Fund, IFC climate funds, GIZ green tech calls.</li>
+                            <li>Angel Investors: Impact-focused angels from Flat6Labs or Cairo Angels Network.</li>
+                            <li>Prize Competitions: Hult Prize, MIT Arab Startup Competition, Orange Social Venture Prize MENA.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-2xl md:text-3xl font-bold text-purple-600 mb-6 text-center">Launch Funding Request: $800,000 – $1,000,000</h3>
+                <p class="text-lg leading-relaxed text-gray-700 text-center mb-8">
+                    This larger round of funding will enable mass production and widespread market penetration.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-purple-50 p-6 rounded-lg shadow-md">
+                        <h4 class="font-semibold text-xl text-purple-800 mb-2">Use of Funds:</h4>
+                        <ul class="list-disc list-inside text-gray-700">
+                            <li>Mass Production: Tooling, scaling component sourcing.</li>
+                            <li>Sales & Support Teams: Hiring rural deployment agents, technical support staff.</li>
+                            <li>Supply Chain Setup: Establishing national distribution and inventory logistics.</li>
+                            <li>Smart Monitoring: Adding IoT-based tracking to systems for enhanced impact reporting.</li>
+                            <li>Field Operations: Acquiring vehicles, setting up site office, procuring installation kits.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-purple-50 p-6 rounded-lg shadow-md">
+                        <h4 class="font-semibold text-xl text-purple-800 mb-2">Potential Launch Funding Sources:</h4>
+                        <ul class="list-disc list-inside text-gray-700">
+                            <li>Blended Finance: Public-private funding mix (Egypt's renewable energy programs + VC).</li>
+                            <li>Venture Capital: Sawari Ventures, Algebra Ventures, ClimateTech VC funds.</li>
+                            <li>Carbon Pre-Financing: Partnering with ESG buyers for future carbon credits.</li>
+                            <li>International Development Institutions: IFC, UNDP, World Bank Green Energy projects.</li>
+                            <li>Crowdfunding Option: Diaspora-targeted green bond or campaign.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="additional-info" class="bg-gray-50 py-16 md:py-24 px-6">
+        <div class="container mx-auto max-w-5xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Additional Strategic Information</h2>
+            <p class="text-center text-gray-600 mb-8">
+                Further details on our governance and exit strategies are available in the <a href="#appendices" class="text-blue-600 hover:underline font-semibold">Appendices</a> section.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">Incubator Strategy</h3>
+                    <p class="text-gray-700 mb-4">
+                        We plan to join a Cleanergy Incubator in Egypt, aligning perfectly with our mission in clean energy and sustainability.
+                    </p>
+                    <h4 class="font-semibold text-lg text-gray-800 mb-2">Benefits include:</h4>
+                    <ul class="list-disc list-inside text-gray-700 mb-4">
+                        <li>Access to Policy Networks (Ministry of Environment, Electricity, NREA).</li>
+                        <li>Support for government-backed pilot projects in rural Egypt.</li>
+                        <li>Grants & technical resources for proof of concept and impact validation.</li>
+                        <li>Mentorship from renewable energy experts and impact investors.</li>
+                    </ul>
+                    <p class="text-gray-700 text-sm">
+                        Alternative backups: Flat6Labs Cairo (broader acceleration), EIT InnoEnergy (EU, for carbon credit guidance).
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold text-green-600 mb-4">Strategic Considerations</h3>
+                    <ul class="list-disc list-inside text-gray-700 leading-relaxed">
+                        <li class="mb-2">Branding & Trust Building: Early investment in educational campaigns to demystify our technology and build trust, especially in rural populations.</li>
+                        <li class="mb-2">Carbon Credit Strategy: Initiating the validation process (e.g., with Verra or Gold Standard) by year 2 to enable early credit issuance and leverage the voluntary carbon market.</li>
+                        <li class="mb-2">Data-Driven Growth: Implementing IoT tracking on deployed systems to gather impact data for investors and funders, and to gain insights into user behavior for continuous improvement.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="appendices" class="bg-gray-200 py-16 md:py-24 px-6 border-t-4 border-blue-600">
+        <div class="container mx-auto max-w-5xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Appendices: Detailed Analyses & Plans</h2>
+            <p class="text-center text-gray-700 mb-8">
+                This section contains the detailed analyses and strategic plans that inform the insights presented above. In a multi-page website, these would typically reside on separate subpages.
+            </p>
+
+            <div class="bg-white p-8 rounded-lg shadow-lg mb-10">
+                <h3 class="text-2xl font-bold text-blue-600 mb-6">Detailed PESTEL Analysis</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-700">
+                    <div>
+                        <h4 class="font-semibold text-lg mb-2">Political:</h4>
+                        <ul class="list-disc list-inside">
+                            <li>Opportunities: Strong government commitment to renewable energy targets (42% by 2035) with supportive policies, tariffs, subsidies, and rural electrification programs. Potential for government-backed pilot projects.</li>
+                            <li>Threats: Evolving regulatory landscape, potential bureaucratic hurdles for permits and certifications.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg mb-2">Economic:</h4>
+                        <ul class="list-disc list-inside">
+                            <li>Opportunities: Rising energy demand and existing electricity shortages create a strong market need. Potential for significant cost savings for consumers.</li>
+                            <li>Threats: Economic instability or inflation could impact consumer purchasing power and material costs.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg mb-2">Social:</h4>
+                        <ul class="list-disc list-inside">
+                            <li>Opportunities: Growing awareness of environmental issues and desire for energy independence among households. Need for reliable energy in remote and underserved communities.</li>
+                            <li>Threats: Lack of public awareness or understanding of new solar technologies (requiring education campaigns).</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg mb-2">Technological:</h4>
+                        <ul class="list-disc list-inside">
+                            <li>Opportunities: Proprietary Fresnel lens and Tesla turbine technology offers a unique competitive advantage. Heat storage integration provides continuous power. IoT for data collection and monitoring.</li>
+                            <li>Threats: Rapid advancements in competing renewable energy technologies; need for continuous R&D investment.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg mb-2">Environmental:</h4>
+                        <ul class="list-disc list-inside">
+                            <li>Opportunities: Direct contribution to CO₂ emission reduction. Alignment with global SDGs (SDG 7: Affordable and Clean Energy, SDG 13: Climate Action). Potential for carbon credit monetization.</li>
+                            <li>Threats: Environmental regulations impacting manufacturing or disposal.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg mb-2">Legal:</h4>
+                        <ul class="list-disc list-inside">
+                            <li>Opportunities: Clear IP protection through patents. Compliance with national energy standards and certifications.</li>
+                            <li>Threats: Complex permitting processes, evolving energy regulations, potential for legal challenges related to IP or compliance.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-lg shadow-lg mb-10">
+                <h3 class="text-2xl font-bold text-green-600 mb-6">Detailed Porter's Five Forces Model (P5F) Analysis</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-700">
+                    <div>
+                        <h4 class="font-semibold text-lg mb-2">Threat of New Entrants: Moderate</h4>
+                        <ul class="list-disc list-inside">
+                            <li>Barriers to Entry: High capital investment for R&D and manufacturing of specialized components. Need for strong technical expertise and IP protection. Established supply chains.</li>
+                            <li>Mitigation: Government incentives for renewable energy might lower some barriers, but our unique technology and robust business model provide a competitive moat.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg mb-2">Bargaining Power of Buyers: High</h4>
+                        <ul class="list-disc list-inside">
+                            <li>Factors: Customers (especially low-income/rural) are price-sensitive and seek affordable, reliable solutions. Availability of substitutes (grid electricity, other solar panels).</li>
+                            <li>Mitigation: Our blended business model with subsidies and grants directly addresses affordability. Strong after-sales support and community engagement build loyalty.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg mb-2">Bargaining Power of Suppliers: Moderate</h4>
+                        <ul class="list-disc list-inside">
+                            <li>Factors: Sourcing specialized components could give suppliers some leverage.</li>
+                            <li>Mitigation: Strategic supplier relationships, potential for in-house manufacturing of certain components, and optimizing cost-efficiency in the supply chain.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg mb-2">Threat of Substitute Products/Services: High</h4>
+                        <ul class="list-disc list-inside">
+                            <li>Factors: Traditional grid electricity, conventional solar PV systems, diesel generators.</li>
+                            <li>Mitigation: Our unique value proposition (Fresnel + Tesla, heat storage, affordability, reliability) differentiates us significantly. Educational campaigns will highlight the benefits over traditional options.</li>
+                        </ul>
+                    </div>
+                    <div class="md:col-span-2">
+                        <h4 class="font-semibold text-lg mt-4 mb-2">Rivalry Among Existing Competitors: Moderate to High</h4>
+                        <ul class="list-disc list-inside">
+                            <li>Factors: Existing energy providers, other solar energy companies (both local and international).</li>
+                            <li>Mitigation: Differentiation through superior technology, focus on underserved segments, strong impact narrative, and strategic partnerships with government and NGOs.</li>
+                        </ul>
+                        <h4 class="font-semibold text-lg mt-4 mb-2">Target Customers and Their Estimated Needs:</h4>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>Homeowners (Middle-income & Energy-conscious urban users first): Seek reliable, affordable, and sustainable energy to reduce electricity bills and gain energy independence.</li>
+                            <li>Farmers/Small Businesses: Require consistent and cost-effective power for agricultural operations, reducing reliance on unstable grid supply.</li>
+                            <li>Rural/Low-income Households: Critically need access to affordable, reliable energy due to limited grid access and economic constraints, benefiting significantly from subsidized pricing and easy installation.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-lg shadow-lg mb-10">
+                <h3 class="text-2xl font-bold text-purple-600 mb-6">Detailed SWOT Analysis</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-700">
+                    <div>
+                        <h4 class="font-semibold text-lg mb-2">Strengths (Internal):</h4>
+                        <ul class="list-disc list-inside">
+                            <li>Innovative Fresnel lens + Tesla turbine technology with integrated heat storage.</li>
+                            <li>Clear leadership and well-defined team roles (RACI matrix).</li>
+                            <li>Resilient multi-stream business model (product sales, grants, services, carbon credits).</li>
+                            <li>Strong alignment with Egypt's national renewable energy goals and global SDGs.</li>
+                            <li>Focus on affordability and accessibility for diverse market segments.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg mb-2">Weaknesses (Internal):</h4>
+                        <ul class="list-disc list-inside">
+                            <li>Potential for heavy workload on Legal & Policy and Operations Leads.</li>
+                            <li>Limited early involvement of Impact & Research Analyst in strategic decision-making.</li>
+                            <li>Need for significant capital investment in R&D and manufacturing scale-up.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg mb-2">Opportunities (External):</h4>
+                        <ul class="list-disc list-inside">
+                            <li>Strong government support and incentives for renewable energy.</li>
+                            <li>Large, underserved market for affordable, reliable energy solutions.</li>
+                            <li>Access to substantial grants and funding from international development organizations.</li>
+                            <li>Growing voluntary carbon market for monetization of environmental impact.</li>
+                            <li>Potential for regional expansion into MENA and Sub-Saharan Africa.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg mb-2">Threats (External):</h4>
+                        <ul class="list-disc list-inside">
+                            <li>Diminishing effectiveness of Aswan Dam exacerbating energy crisis (though also highlights need for solution).</li>
+                            <li>Competition from established energy providers and other solar solution companies.</li>
+                            <li>Evolving regulatory environment and bureaucratic hurdles.</li>
+                            <li>Potential for global supply chain disruptions impacting component sourcing.</li>
+                            <li>Economic downturns affecting consumer purchasing power or grant availability.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-lg shadow-lg mb-10">
+                <h3 class="text-2xl font-bold text-orange-600 mb-6">Detailed Governance & Board Structure</h3>
+                <h4 class="font-semibold text-lg mb-2">Proposed Board Composition:</h4>
+                <ul class="list-disc list-inside text-gray-700 mb-4">
+                    <li>CEO/Founder (Chair) – Strategic leadership, vision</li>
+                    <li>CTO – Tech oversight</li>
+                    <li>Finance & Grants Lead – Budgeting, investor relations</li>
+                    <li>Independent Advisor – Renewable energy policy or investor with governance expertise</li>
+                    <li>Legal/IP Advisor – Oversight on compliance, risk</li>
+                    <li>Impact/ESG Specialist – Align with SDG reporting and carbon monetization</li>
+                </ul>
+                <p class="mb-4 text-gray-700">Total Members: 5–6</p>
+                <h4 class="font-semibold text-lg mb-2">Governance Mechanisms (Early Stage):</h4>
+                <ul class="list-disc list-inside text-gray-700">
+                    <li>Monthly Board Meetings to review milestones, burn rate, and risk.</li>
+                    <li>Impact KPIs Committee to validate CO₂ savings and ensure ESG targets are met.</li>
+                    <li>External Auditor (Annual) for transparency, especially with donor/grant funds.</li>
+                    <li>Legal Counsel Retainer to monitor IP, patents, and licensing compliance.</li>
+                    <li>Clear RACI Matrix (already developed) to ensure team accountability.</li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold text-red-600 mb-6">Financial Exit Strategy</h3>
+                <h4 class="font-semibold text-lg mb-2">Preferred Exit Strategy:</h4>
+                <ul class="list-disc list-inside text-gray-700 mb-4">
+                    <li>Series A funding within 2–3 years to scale internationally (MENA, Sub-Saharan Africa).</li>
+                    <li>Trade sale/acquisition by:
+                        <ul class="list-circle list-inside ml-4">
+                            <li>Energy conglomerates expanding into solar (e.g., Schneider Electric, Enara Capital).</li>
+                            <li>SDG investment platforms or ESG-focused private equity firms.</li>
+                        </ul>
+                    </li>
+                    <li>Carbon credit monetization: Creates a revenue stream that boosts valuation and makes SolarFrenel attractive to green energy funds and impact investors.</li>
+                </ul>
+                <h4 class="font-semibold text-lg mb-2">Potential Secondary Exit:</h4>
+                <p class="text-gray-700">Public-Private Partnership (PPP) model where Egyptian government adopts technology as national program.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="bg-gray-100 py-16 md:py-24 px-6">
+        <div class="container mx-auto max-w-3xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Contact Us</h2>
+            <form class="bg-white p-8 rounded-lg shadow-lg">
+                <div class="mb-6">
+                    <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
+                    <input type="text" id="name" name="name" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your Name">
+                </div>
+                <div class="mb-6">
+                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
+                    <input type="email" id="email" name="email" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="your.email@example.com">
+                </div>
+                <div class="mb-6">
+                    <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message</label>
+                    <textarea id="message" name="message" rows="6" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your message..."></textarea>
+                </div>
+                <div class="flex items-center justify-center">
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full focus:outline-none focus:shadow-outline transform hover:scale-105 transition duration-300">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section id="references" class="bg-white py-16 md:py-24 px-6">
+        <div class="container mx-auto max-w-3xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">References</h2>
+            <div class="text-lg leading-relaxed text-gray-700">
+                <ul class="list-disc list-inside">
+                    <li>Egyptian Electricity Holding Company. (2023). Egypt's Renewable Energy Strategy 2035: Progress Report. Cairo: EEHC Publications.</li>
+                    <li>International Renewable Energy Agency (IRENA). (2024). Renewable Energy Outlook for North Africa. Abu Dhabi: IRENA Publications.</li>
+                    <li>Khalil, M. (2022). Advanced Fresnel Lens Applications in Concentrated Solar Power for Arid Regions. Journal of Solar Energy Engineering, 144(5), 051001.</li>
+                    <li>Sustainable Development Solutions Network (SDSN). (2023). The Sustainable Development Goals Report. New York: United Nations.</li>
+                    <li>Verra. (Latest Year). Voluntary Carbon Standard (VCS) Program Guide. Washington, D.C.: Verra.</li>
+                    <li>World Bank Group. (2023). Powering Egypt: Investment Opportunities in Renewable Energy. Washington, D.C.: World Bank Publications.</li>
+                    <li>Zohdy, A. (2021). Design and Optimization of Small-Scale Tesla Turbines for Off-Grid Power Generation. Renewable Energy Systems Review, 15(2), 123-135.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add animations on scroll
+        const faders = document.querySelectorAll('.animate-fade-in-up, .animate-fade-in');
+
+        const appearOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px" // Adjust to trigger slightly before element is fully in view
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-visible');
+                    appearOnScroll.unobserve(entry.target); // Stop observing once visible
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
+</body>
+</html>
